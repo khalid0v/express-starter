@@ -1,6 +1,19 @@
 {
+  "name": "exprss",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/khalid0v/express-starter#readme",
+  "bugs": {
+    "url": "https://github.com/khalid0v/express-starter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khalid0v/express-starter.git"
+  },
+  "type": "commonjs",
+  "main": "apps/server.cjs",
   "scripts": {
-    "dev": "bun --hot apps/server.js",
+    "dev": "bun --hot apps/server.cjs",
     "format": "biome format --write .",
     "lint": "biome lint .",
     "check": "biome check --write .",

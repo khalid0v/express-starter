@@ -1,10 +1,10 @@
-import { json, urlencoded } from 'body-parser';
-import morgan from 'morgan';
-import compression from 'compression';
-import router from './routes/router';
-import express from 'express';
-import errorHandler from 'errorhandler';
-import cookieParser from './middleware/cookiParser';
+const { json, urlencoded } = require('body-parser');
+const morgan = require('morgan');
+const compression = require('compression');
+const router = require('./routes/router.cjs');
+const express = require('express');
+const errorHandler = require('errorhandler');
+const cookieParser = require('./middleware/cookiParser.cjs');
 
 
 const app = express();

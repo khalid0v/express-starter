@@ -1,10 +1,8 @@
-import { ErrorRequestHandler, Request, Response, NextFunction } from "express";
-
 /** 
- * @param {ErrorRequestHandler} err 
- * @param {Request} req 
- * @param {Response} res 
- * @param {NextFunction} next 
+ * @param {import('express').ErrorRequestHandler} err 
+ * @param {import('express').Request} req 
+ * @param {import('express').Response} res 
+ * @param {import('express').NextFunction} next 
  * @returns 
  */
 function errorHandler (err, req, res, next){
@@ -19,4 +17,4 @@ function errorHandler (err, req, res, next){
     });
 };
 
-export default errorHandler;
+module.exports = errorHandler;

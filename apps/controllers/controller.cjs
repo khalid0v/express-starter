@@ -1,4 +1,4 @@
-import db from "../libs/drizzle.config";
+const db = require("../libs/drizzle.config.cjs");
 
 
 async function testDrizzleEndpoint() {
@@ -7,4 +7,4 @@ async function testDrizzleEndpoint() {
 }
 
 
-export default testDrizzleEndpoint;
+module.exports = testDrizzleEndpoint;
