@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "dev": "bun --hot apps/server.js",
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "check": "biome check --write .",
+    "ci": "biome ci ."
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.2.0",
+    "better-auth": "^1.7.7",
+    "compression": "^1.8.2",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^18.0.5",
+    "drizzle-orm": "^1.0.0-rc.4",
+    "errorhandler": "^1.5.2",
+    "express": "^5.2.1",
+    "morgan": "^1.12.1",
+    "postgres": "^3.4.9"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.15",
+    "drizzle-kit": "^1.0.0-rc.4"
+  }
+}

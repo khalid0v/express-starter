@@ -1,0 +1,4 @@
+/.env
+/.vscode
+/bun.lock
+/node_modules
