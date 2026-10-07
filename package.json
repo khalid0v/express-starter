@@ -1,38 +1,48 @@
 {
-  "name": "exprss",
-  "version": "1.0.0",
-  "description": "",
-  "homepage": "https://github.com/khalid0v/express-starter#readme",
-  "bugs": {
-    "url": "https://github.com/khalid0v/express-starter/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/khalid0v/express-starter.git"
-  },
-  "type": "commonjs",
-  "main": "apps/server.cjs",
-  "scripts": {
-    "dev": "bun --hot apps/server.cjs",
-    "format": "biome format --write .",
-    "lint": "biome lint .",
-    "check": "biome check --write .",
-    "ci": "biome ci ."
-  },
-  "dependencies": {
-    "@neondatabase/serverless": "^1.2.0",
-    "better-auth": "^1.7.7",
-    "compression": "^1.8.2",
-    "cookie-parser": "^1.4.7",
-    "dotenv": "^18.0.5",
-    "drizzle-orm": "^1.0.0-rc.4",
-    "errorhandler": "^1.5.2",
-    "express": "^5.2.1",
-    "morgan": "^1.12.1",
-    "postgres": "^3.4.9"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^2.5.15",
-    "drizzle-kit": "^1.0.0-rc.4"
-  }
+	"name": "exprss",
+	"version": "1.0.0",
+	"description": "",
+	"homepage": "https://github.com/khalid0v/express-starter#readme",
+	"bugs": {
+		"url": "https://github.com/khalid0v/express-starter/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/khalid0v/express-starter.git"
+	},
+	"type": "commonjs",
+	"main": "apps/server.cjs",
+	"scripts": {
+		"dev": "nodemon apps/server.cjs",
+		"format": "biome format --write .",
+		"lint": "biome lint .",
+		"check": "biome check --write --unsafe .",
+		"ci": "biome ci .",
+		"prisma:generate": "prisma generate",
+		"prisma:migrate": "prisma migrate dev",
+		"prisma:deploy": "prisma migrate deploy",
+		"prisma:studio": "prisma studio",
+		"prisma:push": "prisma db push"
+	},
+	"dependencies": {
+		"@neondatabase/serverless": "^1.2.0",
+		"@prisma/adapter-neon": "^7.10.0",
+		"@prisma/client": "^7.10.0",
+		"better-auth": "^1.7.7",
+		"compression": "^1.8.2",
+		"cookie-parser": "^1.4.7",
+		"dotenv": "^18.0.5",
+		"errorhandler": "^1.5.2",
+		"express": "^5.2.1",
+		"module-alias": "^2.3.4",
+		"morgan": "^1.12.1"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.5.15",
+		"nodemon": "^3.1.14",
+		"prisma": "^7.10.0"
+	},
+	"_moduleAliases": {
+		"@": "apps"
+	}
 }

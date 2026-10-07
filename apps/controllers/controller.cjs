@@ -1,10 +1,7 @@
-const db = require("../libs/drizzle.config.cjs");
+const prisma = require("@/db/prisma.cjs");
 
-
-async function testDrizzleEndpoint() {
-    // 
-    return db.execute("SELECT 1 as result");
+async function testPrismaEndpoint() {
+	return prisma.$queryRaw`SELECT 1 as result`;
 }
 
-
-module.exports = testDrizzleEndpoint;
+module.exports = testPrismaEndpoint;

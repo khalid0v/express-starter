@@ -2,3 +2,4 @@
 /.vscode
 /bun.lock
 /node_modules
+/.idea

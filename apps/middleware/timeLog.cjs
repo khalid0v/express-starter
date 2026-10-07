@@ -5,10 +5,11 @@
  * @param import('express').NextFunction next
  * @returns void
  */
-function timeLog(err, res ,req,Next){
-    console.log(`[${req.method}] ${req.originalUrl} - ${new Date().toISOString()}`);
-    return Next();
+function timeLog(_err, _res, req, Next) {
+	console.log(
+		`[${req.method}] ${req.originalUrl} - ${new Date().toISOString()}`,
+	);
+	return Next();
 }
-
 
 module.exports = timeLog;
