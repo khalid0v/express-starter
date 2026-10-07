@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000;
  */
 app.use(json());
 app.use(urlencoded({ extended: true }));
-app.use(router);
+app.use("/api/v1", router);
 app.use(compression());
 app.use(morgan("common"));
 app.use(errorHandler());
