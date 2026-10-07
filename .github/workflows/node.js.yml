@@ -1,0 +1,33 @@
+name: Bun CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        bun-version: [1.1.42, 1.2.4]  # or just use a single "latest"
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Use Bun ${{ matrix.bun-version }}
+      uses: oven-sh/setup-bun@v2
+      with:
+        bun-version: ${{ matrix.bun-version }}
+    - name: Cache Bun dependencies
+      uses: actions/cache@v4
+      with:
+        path: ~/.bun/install/cache
+        key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb') }}
+        restore-keys: |
+          ${{ runner.os }}-bun-
+    - run: bun install
+    # - run: bun run build --if-present
+    # - run: bun test
