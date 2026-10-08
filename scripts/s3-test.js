@@ -1,4 +1,4 @@
-const { uploadObject, getPresignedUrl } = require("../apps/config/s3-client.cjs");
+const { uploadObject, getPresignedUrl } = require("../apps/config/s3-client.js");
 
 async function main() {
 	const key = "test.txt";

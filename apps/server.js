@@ -2,10 +2,10 @@ require("module-alias/register");
 const { json, urlencoded } = require("body-parser");
 const morgan = require("morgan");
 const compression = require("compression");
-const router = require("./routes/router.cjs");
+const router = require("./routes/router.js");
 const express = require("express");
 const errorHandler = require("errorhandler");
-const cookieParser = require("./middleware/cookiParser.cjs");
+const cookieParser = require("./middleware/cookiParser.js");
 
 const app = express();
 const PORT = process.env.PORT || 3000;

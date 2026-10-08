@@ -11,10 +11,10 @@
 		"url": "git+https://github.com/khalid0v/express-starter.git"
 	},
 	"type": "commonjs",
-	"main": "apps/server.cjs",
+	"main": "apps/server.js",
 	"scripts": {
-		"dev": "nodemon apps/server.cjs",
-		"s3:test": "bun scripts/s3-test.cjs",
+		"dev": "nodemon apps/server.js",
+		"s3:test": "bun scripts/s3-test.js",
 		"format": "biome format --write .",
 		"lint": "biome lint .",
 		"check": "biome check --write --unsafe .",

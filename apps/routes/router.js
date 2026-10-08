@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const testPrismaEndpoint = require("@/controllers/controller.cjs");
+const testPrismaEndpoint = require("@/controllers/controller.js");
 const router = Router();
 
 router.get("/health/db", async (_req, res, next) => {
