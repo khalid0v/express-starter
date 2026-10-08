@@ -16,7 +16,7 @@ app.use(json());
 app.use(urlencoded({ extended: true }));
 app.use("/api/v1", router);
 app.use(compression());
-app.use(morgan("common"));
+app.use(morgan("dev"));
 app.use(errorHandler());
 app.use(cookieParser);
 
@@ -24,5 +24,5 @@ app.use(cookieParser);
  * Start the server
  */
 app.listen(PORT, () => {
-	console.dir(`Server is running on port [ http://localhost:${PORT} ]`);
+  console.dir(`Server is running on port [ http://localhost:${PORT} ]`);
 });

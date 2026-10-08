@@ -14,6 +14,7 @@
 	"main": "apps/server.cjs",
 	"scripts": {
 		"dev": "nodemon apps/server.cjs",
+		"s3:test": "bun scripts/s3-test.cjs",
 		"format": "biome format --write .",
 		"lint": "biome lint .",
 		"check": "biome check --write --unsafe .",
@@ -25,13 +26,15 @@
 		"prisma:push": "prisma db push"
 	},
 	"dependencies": {
+		"@aws-sdk/client-s3": "^3.1147.0",
+		"@aws-sdk/s3-request-presigner": "^3.1147.0",
 		"@neondatabase/serverless": "^1.2.0",
 		"@prisma/adapter-neon": "^7.10.0",
 		"@prisma/client": "^7.10.0",
 		"better-auth": "^1.7.7",
 		"compression": "^1.8.2",
 		"cookie-parser": "^1.4.7",
-		"dotenv": "^18.0.5",
+		"dotenv": "^18.0.6",
 		"errorhandler": "^1.5.2",
 		"express": "^5.2.1",
 		"module-alias": "^2.3.4",
