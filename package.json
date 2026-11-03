@@ -11,6 +11,7 @@
 		"url": "git+https://github.com/khalid0v/express-starter.git"
 	},
 	"type": "commonjs",
+	"packageManager": "pnpm@10.34.9",
 	"main": "dist/apps/server.js",
 	"scripts": {
 		"dev": "tsx watch apps/server.ts",
