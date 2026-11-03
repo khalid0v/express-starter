@@ -2,3 +2,7 @@
 /.vscode
 /node_modules
 /.idea
+/dist
+/generated
+/prisma/dev.db
+/prisma/dev.db-journal
